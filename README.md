@@ -9,7 +9,7 @@
 - Add a styled textarea to create a chat input field (textarea supports multiline)
 - Create a neat input experience (check whatsapp or other chat tools)
 - Show the message in the chat list above
-- Think about a long list of messages à how do you solve the chat like inverted
+- Think about a long list of messages. How do you solve the chat like inverted
   scrolling?
 
 ## Lösungsidee
@@ -33,6 +33,7 @@ _Der Fokus lag ganz klar auf dem Chat input. Daher gehe ich ausschließlich dara
 
 - Es werden alle Nachrichten in den Chat geladen. Hier müsste man natürlich pagination mit infinity scroll einbauen und mit Scroll events arbeiten.
 - Da es eine Coding Challenge war, hält Chat.js im Grunde die gesamte Logik. Hier würde man natürlich auf einen globalen State zurückgreifen und könnte es in mehr Components aufteilen.
+- Der klickbare Bereich des "senden" Buttons könnte vergrößert werden.
 
 ### Zusammenfassung
 
