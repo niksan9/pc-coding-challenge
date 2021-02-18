@@ -9,10 +9,7 @@ import {
   IonTabs,
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle } from 'ionicons/icons';
-import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
-import Tab3 from './pages/Tab3';
+import { chatbubblesOutline, ellipse, personCircleOutline, settingsOutline, square, triangle } from 'ionicons/icons';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -32,37 +29,40 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import Chats from './pages/Chats';
+import Profile from './pages/Profile';
+import Settings from './pages/Settings';
 
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route exact path="/tab1">
-            <Tab1 />
+          <Route exact path="/chats">
+            <Chats />
           </Route>
-          <Route exact path="/tab2">
-            <Tab2 />
+          <Route exact path="/settings">
+            <Settings />
           </Route>
-          <Route path="/tab3">
-            <Tab3 />
+          <Route path="/profile">
+            <Profile />
           </Route>
           <Route exact path="/">
-            <Redirect to="/tab1" />
+            <Redirect to="/chats" />
           </Route>
-        </IonRouterOutlet>
+        </IonRouterOutlet>          
         <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
+          <IonTabButton tab="tab1" href="/chats">
+            <IonIcon icon={chatbubblesOutline} />
+            <IonLabel>Chats</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
+          <IonTabButton tab="tab2" href="/settings">
+            <IonIcon icon={settingsOutline} />
+            <IonLabel>Einstellungen</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon icon={square} />
-            <IonLabel>Tab 3</IonLabel>
+          <IonTabButton tab="tab3" href="/profile">
+            <IonIcon icon={personCircleOutline} />
+            <IonLabel>Profil</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
